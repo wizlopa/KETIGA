@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AR Test</title>
+
+  <!-- A-Frame (stable) -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+  <!-- AR.js (more stable CDN) -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden;">
+
+  <!-- Debug alert -->
+  <script>
+    alert("Page loaded");
+  </script>
+
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; debugUIEnabled: true;"
+    vr-mode-ui="enabled: false">
+
+    <!-- Marker Hiro -->
+    <a-marker preset="hiro">
+      
+      <!-- TEST BOX (confirm AR jalan) -->
+      <a-box color="red" position="0 0.5 0"></a-box>
+
+      <!-- MODEL (akan test lepas box confirm keluar) -->
+      <!--
+      <a-entity 
+        gltf-model="model.glb"
+        scale="0.5 0.5 0.5"
+        position="0 0 0">
+      </a-entity>
+      -->
+
+    </a-marker>
+
+    <!-- Camera -->
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
